@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.country {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 1px solid rgb(233, 230, 56);
+    margin-top: 30px;
+}
+
+.ukraine {
+    flex-direction: column;
+}
+
+.ukraine .blue {
+    background-color: rgb(64, 64, 221);
+    flex: 1;
+}
+
+.ukraine .yellow {
+    background-color: yellow;
+    flex: 1;
+}
+
+.japan {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.japan .red {
+    width: 110px;
+    height: 110px;
+    background-color: rgb(184, 37, 37);
+    border-radius: 50%;
+}
+
+.iceland {
+    background-color: darkblue;
+}
+
+.iceland::before,
+.iceland::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+}
+
+.iceland::before {
+    width: 30px;
+    height: 100%;
+    left: 24%;
+}
+
+.iceland::after {
+    width: 100%;
+    height: 30px;
+    top: 42%;
+}
+
+.iceland .red_y,
+.iceland .red_x {
+    position: relative;
+    background-color: rgb(184, 37, 37);
+    width: 15px;
+}
+
+.iceland .red_y {
+    z-index: 10;
+    height: 100%;
+    left: 30%;
+    transform: translateX(-10px);
+}
+
+.iceland .red_x {
+    z-index: 10;
+    height: 300px;
+    left: 42.5%;
+    margin-top: -50px;
+    transform: rotate(90deg);
+}
+
+.czech_republic {
+    flex-direction: column;
+}
+
+.czech_republic .white {
+    background-color: white;
+    flex: 1;
+}
+
+.czech_republic .red {
+    background-color: rgb(211, 43, 43);
+    flex: 1;
+}
+
+.czech_republic .blue {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(44, 44, 128);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
